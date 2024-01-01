@@ -6,4 +6,5 @@ set(SOURCE_FILES
   )
 include_directories(${CMAKE_SOURCE_DIR}/src)
 add_executable(${PROJECT_NAME} ${SOURCE_FILES})
+install(TARGETS ${PROJECT_NAME} RUNTIME DESTINATION bin)
 target_link_libraries(${PROJECT_NAME})

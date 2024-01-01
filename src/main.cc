@@ -45,6 +45,7 @@ int generate_src_dir(std::string path) {
     file << "set(SOURCE_FILES\n\t${CMAKE_SOURCE_DIR}/src/main.cc\n)\n"
       << "include_directories(${CMAKE_SOURCE_DIR}/src)\n"
       << "add_executable(${PROJECT_NAME} ${SOURCE_FILES})\n"
+      << "install(TARGETS ${PROJECT_NAME} RUNTIME DESTINATION bin)\n"
       << "target_link_libraries(${PROJECT_NAME})\n";
 
     file.close();
