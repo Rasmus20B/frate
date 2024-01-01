@@ -118,8 +118,7 @@ int newFrateDir(std::string_view pname) {
   return 0;
 }
 void printUsage() {
-
-  std::cerr << "Usage: \tfrate new [path]\n\tfrate init" << "\n";
+  std::cerr << "Usage: \tfrate new [options] path\n\tfrate init [options]" << "\n";
 }
 
 int parse(const std::vector<std::string_view>& args) {
