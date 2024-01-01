@@ -39,10 +39,9 @@ int generate_src_dir(std::string path) {
   std::filesystem::create_directory(path);
   std::ofstream file(path + "CMakeLists.txt");
 
-  std::cout << "Is a lib?: " << state.isLib << "\n";
-
   if(!state.isLib) {
-    file << "set(SOURCE_FILES\n\t${CMAKE_SOURCE_DIR}/src/main.cc\n)\n"
+    file 
+      << "set(SOURCE_FILES\n\t${CMAKE_SOURCE_DIR}/src/main.cc\n)\n"
       << "include_directories(${CMAKE_SOURCE_DIR}/src)\n"
       << "add_executable(${PROJECT_NAME} ${SOURCE_FILES})\n"
       << "install(TARGETS ${PROJECT_NAME} RUNTIME DESTINATION bin)\n"
@@ -91,7 +90,6 @@ int generate_test_dir(std::string path) {
 int initFrateDir(std::string_view path) {
   std::cout << "[+] Initializing " << path << " as new C++ project\n";
   state.project_name = std::filesystem::path(path).filename().c_str();
-  std::cout << state.project_name << "\n";
   std::string src = std::string(path) + "/src/";
   std::string test = std::string(path) + "/test/";
 
