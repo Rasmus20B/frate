@@ -2,6 +2,7 @@
 
 ## Usage
 To set up a library project:
-`frate new --lib myLibrary`
+`frate new --lib myLibrary`.
+
 To set up a new exectuable project:
-`frate new myExecutable`
+`frate new myExecutable`.
