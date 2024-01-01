@@ -31,6 +31,7 @@ int generate_base_dir(std::string path) {
 
   list.open(".gitinore");
   list << "build\n.cache\n";
+  list.close();
   return 0;
 }
 
